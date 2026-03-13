@@ -11,3 +11,4 @@ einops
 h5py
 plyfile
 trimesh
+gradio>=4.0.0
