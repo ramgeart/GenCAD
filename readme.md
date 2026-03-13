@@ -145,3 +145,44 @@ python stl2img.py -src path/to/stl/files -dst path/to/save/images
 ## 📊 Evaluation
 
 Coming soon.
+
+---
+
+## 🖥️ UI – Interactive CAD Design
+
+GenCAD ships with a browser-based UI that lets you design 3D models using a
+2D/3D visual canvas and a chatbot area for natural-language commands.
+
+### Features
+
+- **3D Canvas** – interactive STL viewer with pan / zoom / rotate
+- **Design chatbot** – type natural-language commands to create and modify shapes
+- **Export** – download the current model as an STL file at any time
+
+### Launch the UI
+
+1. Make sure the environment is active (see *Setup Options* above).
+2. Install the UI dependency:
+   ```bash
+   pip install "gradio>=4.0.0"
+   ```
+3. Start the server:
+   ```bash
+   python -m ui.app
+   # or
+   python ui/app.py
+   ```
+4. Open your browser at **http://localhost:7860**
+
+### Supported commands
+
+| Command | Example |
+|---------|---------|
+| `create box <w> <h> <d>` | `create box 20 10 5` |
+| `create cylinder <r> <h>` | `create cylinder 5 20` |
+| `create sphere <r>` | `create sphere 8` |
+| `create cone <r1> <r2> <h>` | `create cone 10 0 25` |
+| `create torus <R> <r>` | `create torus 15 4` |
+| `export stl` | Export / download current model |
+| `clear` | Remove the current shape |
+| `help` | Full command reference |
